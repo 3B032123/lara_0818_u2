@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use  App\Http\Controllers\HelloController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,5 @@ Route::get('home', function (){
 });
 */
 Route::get('home', [HomeController::class, 'index'])->name('home.index');
+
+Route::get('hello/{name?}', [HelloController::class, 'index'])->name('hello.index');
